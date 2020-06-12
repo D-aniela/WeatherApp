@@ -1,0 +1,102 @@
+.contenedor {
+  background: linear-gradient(to top, #86dbff 0, #e0c3fc 100%);
+  height: 100vh;
+  /* overflow: hidden; */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.circulo {
+  background: linear-gradient(-225deg, #fff 0, #ffe29f 10%, #ffa99f 48%, #ffd1ff 100%);
+  border-radius: 50%;
+  width: 200vh;
+  height: 200vh;
+}
+
+.detalles {
+  position: absolute;
+  background: rgb(102, 102, 171);
+  background: linear-gradient(180deg,
+      rgba(102, 102, 171, 1) 0%,
+      rgba(146, 126, 175, 1) 39%,
+      rgba(232, 172, 182, 1) 76%,
+      rgba(254, 184, 184, 1) 91%);
+  width: 70vw;
+  height: 70vh;
+  border-radius: 30px 30px 0 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+
+.temperatura {
+  position: absolute;
+  display: flex;
+  background: #fff;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 0 0 30px 30px;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.columnaDatos,
+.columnaNombre {
+  position: absolute;
+  top: -90%;
+  left: 10%;
+  text-align: center;
+  color: #fff;
+}
+
+.columnaDatos>div>p:nth-child(1) {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+
+.clear {
+  letter-spacing: 8px;
+  font-size: 18.4;
+  font-weight: 900;
+}
+
+.datos {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.linea{
+  background: #fff;
+  width: 1px;
+  height: 40px;
+}
+
+.columnaNombre{
+  left: 60%;
+  top: -80%;
+  font-size: 28px;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+
+.contenedor .back-arrow{
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  left: 5%;
+  top: 5%;
+  /* padding-left: ; */
+  top: 5%;
+  background: #42B6E7;
+  border-radius: 50%;
+}
+
+.contenedor .back-arrow img{
+  width: 100%;
+  margin-left: 20%;
+}

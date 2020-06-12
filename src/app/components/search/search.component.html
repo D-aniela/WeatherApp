@@ -1,22 +1,23 @@
 <div class="contenedor">
-
   <div class="back-arrow" (click)="IrHome()">
-    <img src="./../../../assets/img/flecha-izquierda.png" alt="">
+    <img src="./../../../assets/img/flecha-izquierda.png" alt="" />
   </div>
 
   <div class="contenedorBuscador">
     <h2>Buscador de ciudades</h2>
 
     <div class="inputBuscador">
-      <input #inputCiudad type="text" placeholder="Buscar ciudad">
-      <span><img src="./../../../assets/img/busqueda.png" alt=""></span>
+      <input #inputCiudad type="text" placeholder="Buscar ciudad" />
+      <span><img src="./../../../assets/img/busqueda.png" alt="" /></span>
     </div>
 
     <p *ngIf="!MostrarTarjeta" class="texto">Seleciona una ciudad</p>
 
-    <app-cards-weather *ngIf="MostrarTarjeta" [climaFiltradoRecibido]="climaFiltrado">
+    <app-cards-weather
+      *ngIf="MostrarTarjeta"
+      [climaFiltradoRecibido]="climaFiltrado"
+      [mostrarBoton]="true"
+    >
     </app-cards-weather>
   </div>
-
-
 </div>

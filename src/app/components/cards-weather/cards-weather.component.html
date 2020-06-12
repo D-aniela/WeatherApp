@@ -1,26 +1,29 @@
-<div class="tarjeta">
-  <p class="titulo">{{climaFiltradoRecibido.NombreCiudad}}</p>
-  <img appCambiarImagenClima [src]="climaFiltradoRecibido.Imagen | construirUrlImagen" alt="">
+<div class="tarjeta" (click)="irDetalles(climaFiltradoRecibido)">
+  <p class="titulo">{{ climaFiltradoRecibido.NombreCiudad }}</p>
+  <img
+    appCambiarImagenClima
+    [src]="climaFiltradoRecibido.Imagen | construirUrlImagen"
+    alt=""
+  />
 
   <div class="climaActual">
-    <p>{{climaFiltradoRecibido.TemperaturaActual | kelvinCelsius}}</p>
-    <p>{{climaFiltradoRecibido.ClimaActual}}</p>
+    <p>{{ climaFiltradoRecibido.TemperaturaActual | kelvinCelsius }}</p>
+    <p>{{ climaFiltradoRecibido.ClimaActual }}</p>
   </div>
 
   <div class="temperaturasEsperadas">
     <div class="temperaturaMinima">
-      <p>{{climaFiltradoRecibido.TemperaturaMinima | kelvinCelsius}}</p>
+      <p>{{ climaFiltradoRecibido.TemperaturaMinima | kelvinCelsius }}</p>
       <p class="textoTemperatura">Min</p>
     </div>
 
     <div class="temperaturaMaxima">
-      <p>{{climaFiltradoRecibido.TemperaturaMaxima | kelvinCelsius}}</p>
+      <p>{{ climaFiltradoRecibido.TemperaturaMaxima | kelvinCelsius }}</p>
       <p class="textoTemperatura">Max</p>
     </div>
   </div>
 
-  <button (click)="AgregarCiudad()">
+  <button (click)="AgregarCiudad()" *ngIf="mostrarBoton">
     ADD CITY
   </button>
-
 </div>
